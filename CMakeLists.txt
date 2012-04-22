@@ -180,7 +180,7 @@ endif()
 set(
     qhull_TARGETS 
         ${qhull_CPP} ${qhull_SHARED} ${qhull_STATIC} ${qhull_STATICP} 
-        qhull rbox qconvex qdelaunay qvoronoi qhalf
+        qhull-bin rbox qconvex qdelaunay qvoronoi qhalf
         user_eg user_eg2 user_eg3
 )
 
@@ -252,9 +252,9 @@ else()
     set(user_eg_DEFINES qh_QHpointer)
 endif()
 
-add_executable(qhull ${qhull_SOURCES})
-target_link_libraries(qhull ${qhull_STATIC})
-set_target_properties(qhull PROPERTIES 
+add_executable(qhull-bin ${qhull_SOURCES})
+target_link_libraries(qhull-bin ${qhull_STATIC})
+set_target_properties(qhull-bin PROPERTIES 
     VERSION ${qhull_VERSION})
 
 add_executable(rbox ${rbox_SOURCES})
