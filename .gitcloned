@@ -1,0 +1,7 @@
+#!/bin/sh
+
+HERE="$(dirname $0)"
+
+export GIT_DIR="$HERE/.git"
+
+git remote add upstream     git://gitorious.org/qhull/qhull
